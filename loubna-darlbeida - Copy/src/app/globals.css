@@ -1,0 +1,459 @@
+@import "tailwindcss";
+
+/* ==============================
+   Root & Global
+============================== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f4e5db;
+    --foreground: #000000;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* ==============================
+   Navbar
+============================== */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  padding: 2rem 6rem;
+}
+
+.navbar-logo h1 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  font-size: 1rem;
+  font-family: "Libre Caslon Text", serif;
+}
+
+.navbar p {
+  cursor: pointer;
+}
+
+/* ==============================
+   Home Section
+============================== */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 90vh;
+}
+
+.home .flower-image {
+  position: inherit;
+  top: 0%;
+  z-index: 1;
+}
+
+.home .img_frame {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+  z-index: -1;
+}
+
+.home .little-stars-image {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 1;
+}
+
+.home .little-stars-image2 {
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  z-index: 1;
+}
+
+.home .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-size: 2.5rem;
+  font-family: "Libre Caslon Text", serif;
+  text-align: center;
+  color: #333;
+}
+
+.home .text-container .contact-us {
+  font-size: 1rem;
+  font-family: "Libre Caslon Text", serif;
+  color: #333;
+  border: 1px solid #333;
+  padding: 0.5rem 4rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ==============================
+   About Section
+============================== */
+.About {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.About .ring {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.About .about-image {
+  border-radius: 10px 10px 70px 10px;
+  box-shadow: 0 2px 2px rgba(43, 43, 43, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.About .flower2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  gap: 10rem;
+}
+
+.about-text {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.About p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: #555;
+  text-align: left;
+}
+
+#about-name {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+/* ==============================
+   Work Section
+============================== */
+.Work {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem;
+  height: 100vh;
+}
+
+.Work .flower2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+
+.Work .little-stars-image {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  z-index: -1;
+}
+
+.Work .little-stars-image2 {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  z-index: -1;
+}
+
+.Work p {
+  margin-left: 120px;
+  align-self: flex-start;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: #555;
+}
+
+.Work #collection {
+  margin: 0.5rem 0 0 120px;
+  align-self: flex-start;
+  font-size: 2.5rem;
+  font-family: "Libre Caslon Text", serif;
+  color: #333;
+}
+
+.Work .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.Work .more-image {
+  cursor: pointer;
+}
+
+.Work #more-image2 {
+  transform: rotateY(180deg);
+}
+
+.Work .ring-images {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.Work .ring-image {
+  border-radius: 10px 70px 10px 70px;
+  box-shadow: 0 2px 2px rgba(43, 43, 43, 0.05);
+  transition: transform 0.3s ease;
+}
+
+/* ==============================
+   Contact Section
+============================== */
+.Contact {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  margin: 10rem 15rem;
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Contact .flower {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/* ==============================
+   Booking Section
+============================== */
+.Booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Libre Caslon Text", serif;
+  padding: 2rem;
+}
+
+.Booking h1 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #222;
+  text-align: center;
+}
+
+.Booking-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+  max-width: 400px;
+}
+
+.form-group-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+  max-width: 400px;
+}
+
+.Booking-form label {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.Booking-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.Booking-form button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "Libre Caslon Text", serif;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.1);
+  transition: var(--background) 0.3s ease;
+}
+
+.Booking-form button:hover {
+  background: #444;
+}
+
+/* ==============================
+   Footer
+============================== */
+.footer {
+  background-color: var(--foreground);
+  color: var(--background);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .navbar a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.footer .navbar p {
+  color: #999;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.footer-decoration {
+  height: 1px;
+  background-color: #e0e0e079;
+  margin: 1rem 12rem;
+}
+
+.flower3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ==============================
+   Effects
+============================== */
+.booking-water-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: radial-gradient(
+    ellipse at 50% 80%,
+    rgba(173, 216, 230, 0.5) 0%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent 100%
+  );
+  filter: blur(12px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+  animation: waterLightMove 4s infinite linear alternate;
+}
+
+@keyframes waterLightMove {
+  0% {
+    background-position: 50% 80%;
+    opacity: 0.7;
+    filter: blur(12px);
+  }
+  50% {
+    background-position: 60% 90%;
+    opacity: 1;
+    filter: blur(16px);
+  }
+  100% {
+    background-position: 40% 70%;
+    opacity: 0.7;
+    filter: blur(12px);
+  }
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 600px) {
+  .footer-decoration {
+    margin: 1rem 2rem;
+  }
+}
