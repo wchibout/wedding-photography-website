@@ -60,7 +60,7 @@ loubna-darlbeida/
 1. Clone the repository:
 
    ```bash
-   git clone <YOUR_REPOSITORY_URL>
+   git clone https://github.com/wchibout/wedding-photography-website
    ```
 
 2. Navigate to the project directory:
@@ -115,6 +115,9 @@ The project is under development. The main portfolio interface and booking form 
 
 ## Credits
 
-Created as a web development project for a wedding photography portfolio.
+Developed by **wchibout** as a web development project for a wedding photography portfolio.
 
-Please add the appropriate author and collaborator credits before publishing the repository.
+The project is built using Next.js, React, TypeScript, and CSS.
+
+Photography, branding, and other project assets should be credited to their respective owners.
+
